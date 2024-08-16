@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("https://i.imgur.com/LdeFDWi.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "topbar topbar"
+        "sidebar content"
+        "footer footer";
+    height: 100vh;
+}
+
+.topbar {
+    background-color: rgba(51, 51, 51, 0.5);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 1px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1; /* Ensure the top bar is above other elements */
+}
+
+.content {
+    margin-left: 120px; /* Adjust for how left it is */
+    padding: 20px;
+    padding-top: 100px; /* Adjusted to accommodate top bar */
+    padding-right: 1px; /* Added padding to the left side */
+    z-index: 0; /* Ensure the content is below the top bar */
+    background-size: cover;
+}
+.img-fluid {
+    width: 150%; /* Makes the image take the full width of its container */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+.sidebar {
+    background-color: rgba(51, 51, 51, 0.5);
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    top: 80px; /* Adjusted to accommodate top bar */
+    left: 0;
+    padding-top: 20px;
+}
+
+.sidebar-content {
+    padding-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+.footer {
+    display: none;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    color: rgb(219, 219, 219);
+}
+
+li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    color: rgb(219, 219, 219);
+}
+
+a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 50;
+    color: rgb(219, 219, 219);
+}
